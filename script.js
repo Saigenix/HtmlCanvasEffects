@@ -70,6 +70,10 @@ class Effect{
                     this.mouse.x = event.x;
                     this.mouse.y = event.y;
         })
+        window.addEventListener('touchmove', event =>  {
+                    this.mouse.x = event.x;
+                    this.mouse.y = event.y;
+        })
     }
     init(ctx){
         ctx.drawImage(img1,this.centerX,this.centerY)
