@@ -2,9 +2,9 @@ const canvas = document.getElementById("canvas1");
 const ctx = canvas.getContext("2d");
 canvas.height = window.innerHeight;
 canvas.width = window.innerWidth;
-// const img1 = document.getElementById("img1")
+const img1 = document.getElementById("img1")
 const btn = document.getElementById("btn1");
-
+const gap = 5;
 
 
 class Particle{
@@ -53,16 +53,16 @@ class Particle{
 }
 
 class Effect{
-    constructor(width , height){
+    constructor(width , height, img , gap){
         this.width = width;
         this.height = height;
         this.pArray = [];
-        this.img1 = document.getElementById("img1");
+        this.img1 = img;
         this.centerX = (this.width * 0.5) - (this.img1.width * 0.5);
         this.centerY = (this.height * 0.5) -  (this.img1.height * 0.5);
-        this.gap = 3;
+        this.gap = gap;
         this.mouse = {
-            radius: 1500,
+            radius: 2000,
             x: undefined,
             y: undefined
         }
@@ -107,10 +107,10 @@ class Effect{
     }
 }
 // testing code
-//console.log(ctx)
-//console.log(canvas)
+// console.log(ctx)
+// console.log(canvas)
 // ctx.drawImage(img1,50,50)
-const effect = new Effect(canvas.width,canvas.height);
+const effect = new Effect(canvas.width,canvas.height,img1,gap);
 effect.init(ctx);
 function animate(){
     ctx.clearRect(0,0,canvas.width,canvas.height);
@@ -120,8 +120,7 @@ function animate(){
 }
  animate();
  btn.addEventListener("click",function() {
-    // console.log("hello")
     effect.warp();
  })
-//console.log(effect)
-console.log("hello script1")
+// console.log(effect)
+console.log("hello 2")
