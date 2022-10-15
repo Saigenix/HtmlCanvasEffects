@@ -1,4 +1,4 @@
-# 🎉 Image As a particle Created using Js
+# 🎉 Html Canvas Effects Using JavaScript!
 
 - > [Live Demo](https://saigenix.github.io/HtmlCanvasEffects/)
 
